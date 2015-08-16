@@ -1,10 +1,14 @@
+<!-- Important! -->
+<!-- Images is not included in the repo, as I do not have the rigths to publizese them. -->
 <!doctype html>
 <html lang="en">    
 <head>
     <meta charset="utf-8">
-    <title>Reveal.js 3 Slide Demo</title>
+    <title>Web Rebels 2015</title>
     <link rel="stylesheet" href="node_modules/reveal%2Ejs/css/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal%2Ejs/css/theme/black.css" id="theme"> 
+    <link rel="stylesheet" href="node_modules/reveal%2Ejs/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="node_modules/reveal%2Ejs/lib/css/zenburn.css">
     <!--Add support for earlier versions of Internet Explorer -->
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -21,87 +25,171 @@
             <!-- Each section element contains an individual slide -->
             <section>
                 <h1>16 foredrag på 20 minutter</h1>
-                <p>Web Rebels 2015 oppsummert</p>        
+                <p>Web Rebels 2015 oppsummert</p>      
+                
+                <aside class="notes">
+Optional notes.
+                </aside>
             </section>
 
-            <section id="one">
-                <h1>Third Party Footprint: Evaluating the Performance of External Scripts</h1>
-                <p>Barbara Bermes</p>
+            <section>
+                <h2><a href="https://vimeo.com/webrebels">vimeo.com/webrebels</a></h2>
             </section>
 
-            <section id="two">
-                <h1>Ladies and Gentlemen We Are Floating in Cyberspace</h1>
-                <p>Brian J Brennan</p>
+            <section data-background="img/third-party-footprint.jpg"></section>
+            <section>
+                <h2>"The offender tag"</h2>
+                <pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">source</span>=<span class="hljs-value">"http://3rdparty.com/script.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+                </pre>
+
+                <h2>Fiks for nyere browsere</h2>
+                <pre><!-- <code class="hljs hljs xml"> -->
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">async</span> <span class="hljs-attribute">source</span>=<span class="hljs-value">"http://3rdparty.com/script.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">defer</span> <span class="hljs-attribute">source</span>=<span class="hljs-value">"http://3rdparty.com/script.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+                <!-- </code> --></pre>
             </section>
 
-            <section id="three">
-                <h1>Intelligent Design: Application Architecture of the Human Body</h1>
-                <p>Brittany Storoz</p>
+            <section data-background="img/ladies-and-gentlemen.jpg"></section>
+            <section>
+                <h2>Innovasjon gjennom begrensning</h2>
             </section>
 
-            <section id="four">
-                <h1>Cheating Gall’s Law</h1>
-                <p>C J Silverio</p>
+            <section data-background="img/application-architecture-of-human-body.jpg"></section>
+            <section>
+                <h2>Finn inspirasjon til god applikasjonsarkitektur i kroppen</h2>
             </section>
 
-            <section id="five">
-                <h1>Immutable JavaScript</h1>
-                <p>Christian Johansen</p>
+            <section data-background="img/who-visualized-the-bomp.jpg"></section>
+            <section>
+                <h2>Læring gjennom lek</h2>
             </section>
 
-            <section id="six">
-                <h1>The Native Web</h1>
-                <p>Dale Harvey</p>
+            <section data-background="img/the-offline-web.jpg"></section>
+            <section>
+                <h2>So we can store tings now, finished?</h2>
+                <ul>
+                    <li>Preload</li>
+                    <li>Selectiv sync</li>
+                    <li>Oppdateringer</li>
+                    <li>Konflikter</li>
+                </ul>
+            </section>
+            
+            <section data-background="img/search-index-js.jpg"></section>
+            <section>
+                <h2>New hotness: Search index in the browser</h2>
+                <ul>
+                    <li>Mindre magi på serveren</li>
+                    <li>Klientene replikerer og bygger egne indexer</li>
+                    <li>Query <-> Resultat lokalt i nettleseren</li>
+                </ul>
             </section>
 
-            <section id="seven">
-                <h1>Creating immersive 3D and audio web experiences with Babylon.js</h1>
-                <p>David Rousset</p>
+            <section data-background="img/rules-for-rebels.jpg"></section>
+            <section>
+                <h2>io.js</h2>
             </section>
 
-            <section id="eigth">
-                <h1>An introduction to search-index.js</h1>
-                <p>Fergus McDowall</p>
+            <section data-background="img/immutable-javascript.jpg">
+                <aside class="notes">
+Få med at det dreier seg om immutable datatyper.
+                </aside>
+            </section>
+            <section>
+                <h2>Do move</h2>
+                <pre><code class="hljs">
+gameHistory = gameHistory.push(game);
+game = revealTile(game, tile);
+                </code></pre>
+                <h2>Undo</h2>
+                <pre><code class="hljs">
+game = gameHistory.last();
+gameHistory = gameHistory.pop();
+                </code></pre>
             </section>
 
-            <section id="nine">
-                <h1>Who Visualized the Bomp</h1>
-                <p>Jenn Schiffer</p>
+            <section data-background="img/javascript-loves-unicode.jpg"></section>
+            <section>
+                <p>&#x2661;</p>
+                <pre><code class="hljs">
+'I \u2661 JavaScript!'
+                </code></pre>
+
+                <p>&#x1F4A9;</p>
+                <pre><code class="hljs">
+'JavaScript is a stinkin' \uD83D\uDCA9' // U+1F4A9
+                </code></pre>
+
+                <aside class="notes">
+Code point <-> Symbol/Glyph <-> Unikt navn
+U+000000 -> U+10FFFF
+U+0000 -> U+FFFF - Basic Multilingual Plane
+Resten supplerende/astrale plan
+                </aside>
             </section>
 
-            <section id="ten">
-                <h1>Shared-memory multicore computation in JavaScript</h1>
-                <p>Lars Hansen</p>
+            <section data-background="img/shared-memory-multicore-computation-in-javascript.jpg"></section>
+            <section>
+                <h2>Web Workers communicating through shared memory</h2>
+                <aside class="notes">
+Hvor mange kjenner til?
+Kommunikasjon gjennom delt minne er raskt.
+Kan være vanskelig å programmere mot.
+Tilgjengelig kun i Firefox Nigthly.
+Ikke standarisert.
+                </aside>
             </section>
 
-            <section id="eleven">
-                <h1>Raising the next generation of rebels</h1>
-                <p>Linda Sandvik</p>
+            <section data-background="img/cheating-gauls-law.jpg">
+                <aside class="notes">
+A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
+                </aside>
+            </section>
+            <section>
+                <h2>@ArchitectClippy says</h2>
+                <p>"I see you have a poorly structured monolith. Would you like me to convert it into a poorly structured set of microservices?"</p>
+                <aside class="notes">
+A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
+                </aside>
             </section>
 
-            <section id="twelve">
-                <h1>VR in the browser with Leap motion and Google cardboard</h1>
-                <p>Mairead Buchan</p>
+            <section data-background="img/baybylon-js.jpg">
+                <aside class="notes">
+WebGL
+                </aside>
+            </section>
+            <section>
+                <h2><a href="http://www.babylonjs.com/" target="_blank">babylonjs.com</a></h2>
             </section>
 
-            <section id="thirteen">
-                <h1>JavaScript ♥ Unicode</h1>
-                <p>Mathias Bynens</p>
+            <section data-background="img/babbeling-with-merfolk.jpg"></section>
+            <section data-background="img/johnny-five.png">
+                <aside class="notes">
+Snakk om at Johnny Five er kult!
+                </aside>
             </section>
 
-            <section id="fourteen">
-                <h1>Async Programming at Netflix</h1>
-                <p>Matthew Podwysocki</p>
+            <section data-background="img/vr-leap-motion-google-cardboard.jpg"></section>
+            <section>
+                <h2><ul>
+                    <li>Leap Motion</li>
+                    <li>three.js</li>
+                    <li>WebRTC</li>
+                    <li>Kalman filter</li>
+                </ul></h2>
             </section>
 
-            <section id="fifteen">
-                <h1>Rules for Rebels</h1>
-                <p>Mikeal Rogers</p>
+            <section data-background="img/raising-rebels.jpg"></section>
+            <section>
+                <h2>Vi trenger nye helter</h2>
             </section>
 
-            <section id="sixteen">
-                <h1>Babbling with the merfolk: between the layers of JavaScript hardware</h1>
-                <p>Suz Hinton</p>
+            <section data-background="img/async-netflix.jpg"></section>
+            <section data-background="img/cat-hat.jpg"></section>
+
+            <section>
+                <h1>Takk for meg!</h1>
             </section>
 
         </div>
@@ -112,6 +200,13 @@
     <script>
         // Required, even if empty.
         Reveal.initialize({
+            dependencies: [
+                // Syntax highlight for <code> elements
+                { src: 'node_modules/reveal%2Ejs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                // Speaker notes
+                { src: 'node_modules/reveal%2Ejs/plugin/notes/notes.js', async: true }
+            ]
         });
     </script>
 </body>
