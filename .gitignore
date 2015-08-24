@@ -2,3 +2,5 @@ slides/node_modules/
 slides/img/
 
 kodekamp/one-time-pads/data
+kodekamp/duplicate-file-remover/*.exe
+kodekamp/duplicate-file-remover/test/*
